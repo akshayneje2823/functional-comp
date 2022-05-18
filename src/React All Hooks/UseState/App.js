@@ -3,8 +3,7 @@ import React from 'react';
 import Navbar from './Navbar';
 import {BrowserRouter as Router,Route,Routes} from 'react-router-dom';
 import Card from './State And Props/Card';
-import Reducer from './Reducer'
-
+import Example1 from './Example1';
 
 function App() {
   return (
@@ -13,7 +12,7 @@ function App() {
        <Navbar/>
           <Routes>
             <Route path='/card' element={<Card />}></Route>
-            <Route path='/example1' element={<Reducer />}></Route>
+            <Route path='/example1' element={<Example1 />}></Route>
           </Routes>
       </Router>
     </React.Fragment>
