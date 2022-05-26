@@ -1,11 +1,7 @@
 import React from 'react';
-
 import Navbar from './Navbar';
+import FetchApi from './fetchApi';
 import {BrowserRouter as Router,Route,Routes} from 'react-router-dom';
-import Card from './State And Props/Card';
-import Reducer from './Reducer'
-import Reducer1 from './Reducer1';
-import fetchApi from './fetch API/fetchApi'
 
 
 function App() {
@@ -14,10 +10,7 @@ function App() {
      <Router>
        <Navbar/>
           <Routes>
-            <Route path='/card' element={<Card />}></Route>
-            <Route path='/reduer' element={<Reducer />}></Route>
-            <Route path='/reduer1' element={<Reducer1 />}></Route>
-            <Route path='/fetchApi' element={<fetchApi />}></Route>
+            <Route path='/FetchApi' element={<FetchApi />}></Route>
           </Routes>
       </Router>
     </React.Fragment>

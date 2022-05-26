@@ -12,7 +12,7 @@ function Navbar() {
             <li className='nav-item'><Link to="/card" className='nav-link '>Card</Link></li>
             <li className='nav-item'><Link to="/reduer" className='nav-link '>Reducer</Link></li>
             <li className='nav-item'><Link to="/reduer1" className='nav-link '>Reducer1</Link></li>
-            <li className='nav-item'><Link to="/fetchApi" className='nav-link '>fetchApi</Link></li>
+            <li className='nav-item'><Link to="/FetchApi" className='nav-link '>FetchApi</Link></li>
           </ul>
         </div>
       </nav>
