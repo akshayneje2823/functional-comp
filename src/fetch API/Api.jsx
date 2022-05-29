@@ -29,12 +29,12 @@ let onchangeHandler = (e) =>{
       <input type="text" value={id} onChange={onchangeHandler}/>
       <button type='button' onClick={clickHandler}> Fetch Post</button>
       <div>{post.title}</div>
-        {/* <ul>
+        <ul>
           {
             post.map(post =>(<li key={post.id}>{post.title}</li>
 
           ))}
-        </ul> */}
+        </ul>
     </div>
   )
 }
@@ -43,4 +43,3 @@ export default Api
 
 
 
-// https://jsonplaceholder.typicode.com/posts

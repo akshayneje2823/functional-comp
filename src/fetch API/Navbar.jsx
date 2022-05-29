@@ -12,9 +12,7 @@ function Navbar() {
             <li className='nav-item'><Link to="/card" className='nav-link '>Card</Link></li>
             <li className='nav-item'><Link to="/reduer" className='nav-link '>Reducer</Link></li>
             <li className='nav-item'><Link to="/reduer1" className='nav-link '>Reducer1</Link></li>
-            {/* <li className='nav-item'><Link to="/useEffect" className='nav-link '>UseEffect</Link></li> */}
             <li className='nav-item'><Link to="/api" className='nav-link '>Api</Link></li>
-            {/* <li className='nav-item'><Link to="/api" className='nav-link '>Api</Link></li> */}
             
           </ul>
         </div>
