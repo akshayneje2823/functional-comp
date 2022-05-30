@@ -2,7 +2,9 @@ import React from 'react';
 import Navbar from './Navbar';
 
 import {BrowserRouter as Router,Route,Routes} from 'react-router-dom';
-import UseContext from './UseContext';
+import Api from './Api';
+// import Api from './fetch API/Api';
+// import USeEffcet from './USeEffect'
 
 
 
@@ -12,7 +14,9 @@ function App() {
      <Router>
        <Navbar/>
           <Routes>
-            <Route path='/usecontext' element={<UseContext/>}  />
+            {/* <Route path='/useEffect' element={<USeEffcet/>}/> */}
+            <Route path='/api' element={<Api/>}/>
+            
           </Routes>
       </Router>
     </React.Fragment>
