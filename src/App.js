@@ -11,7 +11,9 @@ function App() {
        <Navbar/>
           <Routes>
             {/* <Route path='/usecontext' element={<UseContext/>}  /> */}
-           
+           <h1>
+             Hello
+           </h1>
           </Routes>
       </Router>
     </React.Fragment>
