@@ -1,10 +1,11 @@
 import React from 'react'
 import ReactDOM  from 'react-dom'
-import App from './App'
+// import App from '../src/Code Step By Step/App'
+import Form from './Code Step By Step/Form'
 
 ReactDOM.render(
     <React.Fragment>
-        <App/>
+        <Form/>
     </React.Fragment>,
   document.getElementById("root")
   )
