@@ -1,11 +1,10 @@
 import React from 'react'
 import ReactDOM  from 'react-dom'
-// import App from '../src/Code Step By Step/App'
-import From from './Code Step By Step/Pure Component/From'
+import App from './React All Hooks/Context Api/App'
 
 ReactDOM.render(
     <React.Fragment>
-        <From/>
+        <App/>
     </React.Fragment>,
   document.getElementById("root")
-  )
+  ) 
