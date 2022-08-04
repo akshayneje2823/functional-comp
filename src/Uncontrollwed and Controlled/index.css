@@ -1,0 +1,13 @@
+.App{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: solid black;
+    min-height: 100vh;
+    
+}
+.offscreen{
+    position: absolute;
+    left: -9999px;
+}
