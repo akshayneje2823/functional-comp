@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM  from 'react-dom'
 // import App from './Uncontrollwed and Controlled/App'
-import ControlledComponent from './Uncontrollwed and Controlled/ControlledComponent'
+import ControlledComponent from './Upload Files/App'
 
 
 ReactDOM.render(
