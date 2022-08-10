@@ -1,20 +1,19 @@
-import React,{useEffect, useState} from 'react'
+import React,{ useState} from 'react'
+import WithProps from './WithProps';
 
-function USeEffect() {
+function UseEffect() {
     const [Count, setCount] = useState(0);
-    const [Name, setName] = useState('');
-
-    useEffect(()=>{
-        console.log("Use State is updating....")
-        document.title = `You clicked the ${Count}`
-    },[Count])
+    const [Data, setData] = useState(100)
 
   return (
     <div>
-        <input type="text" value={Name} onChange={(e)=>setName(e.target.value)}  />
-        <button className='mt-5 ml-5' onClick={()=>setCount(Count +1)}>Click Me{Count}</button>
+       <WithProps Count={Count} Data={Data}/>
+        <button onClick={()=>setCount(Count + 1)}>Count{Count}</button>
+        <br/>
+        <br/>
+        <button onClick={()=>setData(Data + 1)}>Data{Data}</button>
     </div>
   )
 }
 
-export default USeEffect
+export default UseEffect
