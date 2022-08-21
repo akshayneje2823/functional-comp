@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios'
-import { Link } from 'react-router-dom';
+import axios from 'axios';
+import {Link} from 'react-router-dom'
 
 export default function Home() {
     const [users, setUsers] = useState([]);
@@ -24,26 +24,27 @@ export default function Home() {
                         <tr>
                             <th scope='col'>#</th>
                             <th scope='col'>Name</th>
-                            <th scope='col'>User Name</th>
+                            <th scope='col'>Phone</th>
                             <th scope='col'>Email</th>
                             <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
                         {
-                            users.map((user,index) => (
+                            users.map((user,index) =>{ 
+                                        return (
                                 <tr>
                                     <th scope='row'>{index + 1}</th>
                                     <td>{user.name}</td>
-                                    <td>{user.username}</td>
+                                    <td>{user.phone}</td>
                                     <td>{user.email}</td>
                                     <td>
-                                    <Link className='btn btn-primary mr-2'>View</Link>
-                                    <Link className='btn btn-outline-secondary'>Edit</Link>
-                                    <Link className='btn btn-danger'>Delete</Link>
+                                        <Link to='/' className='btn btn-primary btn-sm mr-2'>View</Link>
+                                        <Link to='/' className='btn btn-success btn-sm mr-2'>Edit</Link>
+                                        <Link to='/' className='btn btn-warning btn-sm mr-2'>Delete</Link>
                                     </td>
                                 </tr>
-                            ))
+                            )})
                         }
                     </tbody>
                 </table>
