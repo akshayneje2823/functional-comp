@@ -4,7 +4,7 @@ export default function Contact() {
     return (
         <div className='container'>
             <div className="py-4">
-                <form>
+                <form onSubmit={e => e.preventDefault()}>
                     <div class="form-group">
                         <label for="exampleFormControlInput1">Email address</label>
                         <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" />

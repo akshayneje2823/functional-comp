@@ -11,8 +11,13 @@ export default function Home() {
 
     const loadUsers = async () => {
         const result = await axios.get("http://localhost:3003/users");
-        setUsers(result.data);
+        setUsers(result.data.reverse());
         console.log(result.data)
+    };
+
+    const deleteUser = async id =>{
+        await axios.delete(`http://localhost:3003/users/${id}`);
+        loadUsers()
     }
 
     return (
@@ -39,9 +44,9 @@ export default function Home() {
                                     <td>{user.phone}</td>
                                     <td>{user.email}</td>
                                     <td>
-                                        <Link to='/' className='btn btn-primary btn-sm mr-2'>View</Link>
-                                        <Link to='/' className='btn btn-success btn-sm mr-2'>Edit</Link>
-                                        <Link to='/' className='btn btn-warning btn-sm mr-2'>Delete</Link>
+                                        <Link to={`/users/${user.id}`} className='btn btn-primary btn-sm mr-2'>View</Link>
+                                        <Link to={`/users/edit/${user.id}`} className='btn btn-success btn-sm mr-2'>Edit</Link>
+                                        <Link to='/' className='btn btn-warning btn-sm' onClick={ () => deleteUser(user.id)}>Delete</Link>
                                     </td>
                                 </tr>
                             )})
