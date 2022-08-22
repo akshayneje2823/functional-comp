@@ -9,27 +9,27 @@ function AddUser() {
         phone: "",
         email: ""
     });
-    
+
     // destructing
     // const { name, phone, email} = user
 
     const onchangeHandler = (event) => {
-        setUser({...user, [event.target.name] : event.target.value});
+        setUser({ ...user, [event.target.name]: event.target.value });
     }
 
     const navigate = useNavigate()
 
     const submitHandler = async event => {
         event.preventDefault();
-        await Axios.post('http://localhost:3003/users',user);
+        await Axios.post('http://localhost:3003/users', user);
         navigate('/')
     }
 
 
-  
+
     return (
         <>
-            <div className="container mt-7">
+            <div className="container">
                 <div className="w-75 mx-auto shadow p-5">
                     <h1 className='text-center mb-4'>Add User</h1>
                     <form action="" onSubmit={submitHandler}>
@@ -42,7 +42,7 @@ function AddUser() {
                                     placeholder='Enter your Name'
                                     name='name'
                                     value={user.name}
-                                    onChange={ event => onchangeHandler(event) } />
+                                    onChange={event => onchangeHandler(event)} />
                             </div>
                             <div className="form-group">
                                 <input
@@ -51,7 +51,7 @@ function AddUser() {
                                     placeholder='Enter your Phone Number'
                                     name='phone'
                                     value={user.phone}
-                                    onChange={ event => onchangeHandler(event) } />
+                                    onChange={event => onchangeHandler(event)} />
                             </div>
                             <div className="form-group">
                                 <input type="email"
@@ -59,7 +59,7 @@ function AddUser() {
                                     placeholder='Enter your Email'
                                     name='email'
                                     value={user.email}
-                                    onChange={ event => onchangeHandler(event) } />
+                                    onChange={event => onchangeHandler(event)} />
                             </div>
                             <button className='btn btn-primary btn-block'>Add User</button>
                         </div>

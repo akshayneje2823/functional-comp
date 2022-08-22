@@ -36,7 +36,7 @@ function EditUser() {
     useEffect(() => {
         loadUser()
     }, [])
-    
+
 
     return (
         <>

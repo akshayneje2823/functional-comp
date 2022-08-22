@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 export default function Home() {
     const [users, setUsers] = useState([]);
@@ -15,7 +15,7 @@ export default function Home() {
         console.log(result.data)
     };
 
-    const deleteUser = async id =>{
+    const deleteUser = async id => {
         await axios.delete(`http://localhost:3003/users/${id}`);
         loadUsers()
     }
@@ -36,20 +36,21 @@ export default function Home() {
                     </thead>
                     <tbody>
                         {
-                            users.map((user,index) =>{ 
-                                        return (
-                                <tr>
-                                    <th scope='row'>{index + 1}</th>
-                                    <td>{user.name}</td>
-                                    <td>{user.phone}</td>
-                                    <td>{user.email}</td>
-                                    <td>
-                                        <Link to={`/users/${user.id}`} className='btn btn-primary btn-sm mr-2'>View</Link>
-                                        <Link to={`/users/edit/${user.id}`} className='btn btn-success btn-sm mr-2'>Edit</Link>
-                                        <Link to='/' className='btn btn-warning btn-sm' onClick={ () => deleteUser(user.id)}>Delete</Link>
-                                    </td>
-                                </tr>
-                            )})
+                            users.map((user, index) => {
+                                return (
+                                    <tr>
+                                        <th scope='row'>{index + 1}</th>
+                                        <td>{user.name}</td>
+                                        <td>{user.phone}</td>
+                                        <td>{user.email}</td>
+                                        <td>
+                                            <Link to={`/users/${user.id}`} className='btn btn-primary btn-sm mr-2'>View</Link>
+                                            <Link to={`/users/edit/${user.id}`} className='btn btn-success btn-sm mr-2'>Edit</Link>
+                                            <Link to='/' className='btn btn-warning btn-sm' onClick={() => deleteUser(user.id)}>Delete</Link>
+                                        </td>
+                                    </tr>
+                                )
+                            })
                         }
                     </tbody>
                 </table>
