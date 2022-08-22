@@ -12,14 +12,11 @@ function AddCricketer() {
     const onchangeHandler = (event) => {
         console.log(event.target.value)
         setCricketer({ ...cricketer, [event.target.name]: event.target.value });
-    }
+    };
 
-    const submitHandler = event => {
-        event.preventDefault();
+    // const navigate = useNavigate()
 
-    }
-
-
+    const submitHandler = event => event.preventDefault();
 
     return (
         <>
@@ -57,7 +54,7 @@ function AddCricketer() {
                         onChange={ event => onchangeHandler(event)}
                          />
                     </div>
-                    <button type="submit" className="btn btn-primary">Add</button>
+                    <button className="btn btn-primary">Add</button>
                 </form>
                     </div>
                 </div>
