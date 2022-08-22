@@ -1,8 +1,6 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom'
+import React from 'react';
 
-export default function Cricketer() {
-    const [cricketers, setCricketers] = useState([]);
+export default function Cricketer(props) {
 
     return (
         <div className='container'>
@@ -19,16 +17,13 @@ export default function Cricketer() {
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <th scope='row'>1</th>
-                            <td>Akshay</td>
-                            <td>Boller</td>
-                            <td>22</td>
-                            {/* <td>
-                                <Link to='/' className='btn btn-success btn-sm mr-2'>Edit</Link>
-                                <Link to='/' className='btn btn-warning btn-sm' onClick={() => { }}>Delete</Link>
-                            </td> */}
-                        </tr>
+                        {
+                            props.cricketers.map((newCrick)=>{
+                                return <tr>
+                                    <td>{newCrick.name}</td>
+                                </tr>
+                            })
+                        }
                     </tbody>
                 </table>
             </div>

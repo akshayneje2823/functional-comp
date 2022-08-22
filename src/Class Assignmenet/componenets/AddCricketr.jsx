@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Cricketer from './Cricketer';
 
 
 function AddCricketer() {
@@ -7,6 +8,7 @@ function AddCricketer() {
         role: "",
         age: ""
     });
+    const [cricketers, setCricketers] = useState({});
 
 
     const onchangeHandler = (event) => {
@@ -14,9 +16,14 @@ function AddCricketer() {
         setCricketer({ ...cricketer, [event.target.name]: event.target.value });
     };
 
-    // const navigate = useNavigate()
 
-    const submitHandler = event => event.preventDefault();
+    const submitHandler = (event) => {
+        event.preventDefault();
+        setCricketers((oldCricketer)=>{
+            return ({...oldCricketer,cricketer})
+        })
+        
+    }
 
     return (
         <>
@@ -48,7 +55,7 @@ function AddCricketer() {
                         <input 
                         type="number" 
                         className="form-control form-control-lg" 
-                        placeholder="Enter your Role..."
+                        placeholder="Enter your Age..."
                         name='age'
                         value={cricketer.age}
                         onChange={ event => onchangeHandler(event)}
@@ -57,6 +64,9 @@ function AddCricketer() {
                     <button className="btn btn-primary">Add</button>
                 </form>
                     </div>
+                </div>
+                <div className="allData">
+                    <Cricketer cricketers={cricketers}/>
                 </div>
             </div>
         </>
