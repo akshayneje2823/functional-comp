@@ -2,15 +2,21 @@ import React, { Fragment } from 'react';
 import { Button, Table } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Employee from './Employee';
+import {Link,useNavigate} from 'react-router-dom'
 
 export default function Home() {
+
+    let history = useNavigate()
+
     const deleteHandler = (id) =>{
         var index = Employee.map((newEmp)=>{
             return newEmp.id;
         }).indexOf(id)
         console.log(index)
         
-        Employee.slice(index,1) 
+        Employee.splice(index,1) ;
+
+        history('/')
     }
     return (
         <Fragment>
@@ -51,6 +57,11 @@ export default function Home() {
                         }
                     </tbody>
                 </Table>
+                <br />
+                <br />
+                <Link className='d-grid' to='/create'>
+                    <Button size='lg'>Add Uer</Button>
+                </Link>
             </div>
         </Fragment>
     )
