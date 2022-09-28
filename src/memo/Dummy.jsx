@@ -1,10 +1,10 @@
-import React ,{memo}from 'react'
+import React, { memo } from 'react'
 
 function Dummy(props) {
-    console.log("Inner Component")
+  console.log("Inner Component")
   return (
     <div>
-        <h1>{props.data}</h1>
+      <h1>{props.data}</h1>
     </div>
   )
 }
