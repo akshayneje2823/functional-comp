@@ -10,6 +10,7 @@ import EditUser from './components/pages/EditUser';
 import View from './components/pages/View';
 
 function App() {
+    
     return (
         <Router>
             <Navbar />
